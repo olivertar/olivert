@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>reward on olivert</title>
+    <link>https://olivertar.github.io/tags/reward/</link>
+    <description>Recent content in reward on olivert</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Fri, 21 May 2021 17:54:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://olivertar.github.io/tags/reward/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Shopware 6 – Instalación usando Reward</title>
+      <link>https://olivertar.github.io/shopware-6-instalacion-usando-reward/</link>
+      <pubDate>Fri, 21 May 2021 17:54:00 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/shopware-6-instalacion-usando-reward/</guid>
+      <description>Este post documenta como instalar Shopware 6 con el orquestador de docker Reward.
+Reward esta inspirado en Warden pero me parece un poco mas flexible para lo que suelo necesitar en mi estación local para el desarrollo con PHP, Magento 2, Shopware o WordPress.
+Si estas interesado en conocer mas sobre Reward o como instalarlo la documentación es bastante clara.
+Para crear un host usando Reward es imprescindible haberlo levantado, si no lo tenemos corriendo lo hacemos con:</description>
+    </item>
+    
+  </channel>
+</rss>

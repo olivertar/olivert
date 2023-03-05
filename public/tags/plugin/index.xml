@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>plugin on olivert</title>
+    <link>https://olivertar.github.io/tags/plugin/</link>
+    <description>Recent content in plugin on olivert</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Fri, 01 Oct 2021 00:10:02 +0000</lastBuildDate>
+    
+	<atom:link href="https://olivertar.github.io/tags/plugin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Shopware 6 – Instalar extensiones / plugins</title>
+      <link>https://olivertar.github.io/shopware-6-instalar-extensiones-plugins/</link>
+      <pubDate>Fri, 01 Oct 2021 00:10:02 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/shopware-6-instalar-extensiones-plugins/</guid>
+      <description>Shopware 6 tiene diferentes mecanismos para instalar extensiones.
+En este post veremos cómo instalar una extensión existente en el Marketplace de Shopware
+Vamos a tomar como ejemplo la extensión &amp;ldquo;Shopware Language Pack&amp;rdquo; disponible para versiones mayores a 6.3.5.0
+https://store.shopware.com/en/swag338126230916f/shopware-language-pack.html
+Shopware nos permite instalar de 3 maneras
+  Desde el menú &amp;ldquo;Extensions &amp;gt; Store&amp;rdquo; del panel de administración de nuestro proyecto
+  Descargando el código de la extensión desde el marketplace</description>
+    </item>
+    
+  </channel>
+</rss>

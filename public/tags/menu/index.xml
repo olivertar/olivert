@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>menu on olivert</title>
+    <link>https://olivertar.github.io/tags/menu/</link>
+    <description>Recent content in menu on olivert</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Thu, 04 Jun 2020 20:32:03 +0000</lastBuildDate>
+    
+	<atom:link href="https://olivertar.github.io/tags/menu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Magento 2 – Modificando el menú de la cuenta de usuario</title>
+      <link>https://olivertar.github.io/modificando-el-menu-de-la-cuenta-de-usuario/</link>
+      <pubDate>Thu, 04 Jun 2020 20:32:03 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/modificando-el-menu-de-la-cuenta-de-usuario/</guid>
+      <description>Es común que a los desarrolladores nos soliciten modificar el menú que se muestra en la sección “My Account”
+Lo mas común es remover algún ítem, cambiar el orden o agregar algún ítem nuevo.
+Para eliminar o alterar el orden de los ítems lo que tenemos que hacer es agregar información al layout “customer_account.xml” del modulo Magento Customer
+La manera de hacerlo es extendiendo el layout “customer_account.xml” en nuestro theme personalizado</description>
+    </item>
+    
+  </channel>
+</rss>

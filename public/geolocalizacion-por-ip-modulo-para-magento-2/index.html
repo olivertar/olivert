@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="olivert">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="/img/placeholder.jpg">
+    <meta property="twitter:image" content="/img/placeholder.jpg" />
+    
+
+    
+    <meta name="title" content="Geolocalización por IP – Modulo para Magento 2" />
+    <meta property="og:title" content="Geolocalización por IP – Modulo para Magento 2" />
+    <meta property="twitter:title" content="Geolocalización por IP – Modulo para Magento 2" />
+    
+
+    
+    <meta name="description" content="Magento y otras cosas también">
+    <meta property="og:description" content="Magento y otras cosas también" />
+    <meta property="twitter:description" content="Magento y otras cosas también" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Geolocalización por IP – Modulo para Magento 2 | olivert | Oliverio Gombert Blog</title>
+
+    <link rel="canonical" href="/geolocalizacion-por-ip-modulo-para-magento-2/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-155812403-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">olivert</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/general">general</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/magento">magento</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/productividad">productividad</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/pwa">pwa</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/shopware">shopware</a>
+                        </li>
+                        
+                    
+                    
+		    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/placeholder.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/extension" title="extension">
+                            extension
+                        </a>
+                        
+                        <a class="tag" href="/tags/magento" title="magento">
+                            magento
+                        </a>
+                        
+                        <a class="tag" href="/tags/magento-2" title="Magento 2">
+                            Magento 2
+                        </a>
+                        
+                    </div>
+                    <h1>Geolocalización por IP – Modulo para Magento 2</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                olivertar
+                             
+                            on 
+                            Tuesday, March 3, 2020
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <p>Recientemente hice una prueba técnica para aplicar a un empleo, en uno de los requerimientos se solicitaba geolocalizar al usuario partiendo de su IP.</p>
+<p>Esto me dio pie para desarrollar un <a href="https://github.com/olivertar/m2_geoip">modulo</a> para <a href="href=%22https://magento.com/">Magento 2</a> que hace tiempo tenia ganas de hacer. (<a href="https://github.com/olivertar/m2_geoip">https://github.com/olivertar/m2_geoip</a>)</p>
+<p><strong>Un poco de historia</strong></p>
+<p>En las épocas doradas de <a href="https://magento.com/">Magento</a> 1 este tipo de módulos florecían como hongos, la gran mayoría utilizaban un servicio de terceros que permitía conocer la procedencia de una IP. El mas conocido es <!-- raw HTML omitted -->MaxMind<!-- raw HTML omitted -->.</p>
+<p>Originalmente estos servicios brindaban un archivo en formato CSV y mas cerca en el tiempo comenzaron a usar formato MMDB con la información de las IP de todo el mundo.</p>
+<p>Los módulos consistían en un sistema que obtenía periódicamente el archivo desde <a href="href=%22https://dev.maxmind.com/geoip/geoip2/geolite2/">MaxMind</a> y luego mediante una librería extraer la información de la IP sea del CSV o del MMBD.</p>
+<p>En general las variantes en los módulos consistían en que algunos, después de obtener los archivos, metían la información en tablas de la base de datos de <a href="https://magento.com/">Magento</a> para mejorar la performance evitando abrir un archivo físico o evitar usar/instalar alguna librería especial de PHP en el caso de los archivos MMDB.</p>
+<p>Con la aparición de <a href="https://magento.com/">Magento 2</a> cambio la codificación pero la arquitectura permaneció mas o menos igual. Quizá la mayor diferencia fue que los módulos de este tipo mayoritariamente dejaron de ser gratuitos.</p>
+<p>Durante el año 2019, <a href="href=%22https://dev.maxmind.com/geoip/geoip2/geolite2/">MaxMind</a> cambio su política, si bien continua siendo un servicio gratuito en su versión lite, para suministrar la database de IP’s y requiere registrarse y obtener una key para poder hacer la descarga del archivo.</p>
+<p><strong>Opciones gratuitas en este momento</strong></p>
+<p>Al momento de escribir este articulo hay al menos 2 módulos gratuitos de empresas reconocidas que permiten geolocalizar una IP. Ambos utilizan el servicio de <a href="href=%22https://dev.maxmind.com/geoip/geoip2/geolite2/">MaxMind</a>.</p>
+<p>Revisando el código de 2 módulos encontré que el archivo es descargado desde una url del servidor del desarrollador y no directamente desde el servidor de <a href="href=%22https://dev.maxmind.com/geoip/geoip2/geolite2/">MaxMind</a> que requiere la licencia.</p>
+<p>Los motivos y la valoración de la razón por la cual lo han hecho de esa manera no es algo que me corresponda criticar, tampoco lo es la manera en que están codificados, pero no me parece apropiado instalar en el sistema de un cliente un modulo que obtenga información desde un servicio que no es el original. De echo lo que se obtiene desde estos servidores “alternativos” es el archivo MMBD en lugar del tar.gz que suministra <a href="href=%22https://dev.maxmind.com/geoip/geoip2/geolite2/">MaxMind</a>.</p>
+<p>Es por todo esto que me pareció una buena oportunidad para hacer un desarrollo que permita obtener el archivo directamente desde <a href="href=%22https://dev.maxmind.com/geoip/geoip2/geolite2/">MaxMind</a> para geolocalizar IP’s.</p>
+<p><strong>Mi versión de modulo Geo IP</strong></p>
+<p>La principal característica de <!-- raw HTML omitted -->mi modulo Geo IP<!-- raw HTML omitted -->, como se imaginaran, es provee los medios en el backend para guardar la key suministrada por <a href="href=%22https://dev.maxmind.com/geoip/geoip2/geolite2/">MaxMind</a> en el registro y poder descargar la información.</p>
+<p>El modulo descomprime el archivo tar.gz descargado, guarda solo el archivo mmbd que se encuentra en su interior y descarta el resto.</p>
+<p>Las consultas para geolocalizar la IP se hacen directamente sobre el archivo mmdb por lo cual se requiere tener instalada la librería <!-- raw HTML omitted -->GeoIP2 PHP API<!-- raw HTML omitted -->.</p>
+<p>Adicionalmente el archivo con la database de IP’s puede ser actualizado manualmente desde el backend o rutinariamente con el cron. <a href="href=%22https://dev.maxmind.com/geoip/geoip2/geolite2/">MaxMind</a> actualiza el archivo una vez por semana.</p>
+<p>Para poder ser utilizado por otros módulos de aplicación concreta (switch de moneda, idioma, etc), el modulo suministra un helper que tiene métodos para identificar la IP del usuario y otros para devolver la geolocalizacion a partir de una IP que se pasa como parámetro.</p>
+<p>Finalmente, para poder hacer verificaciones el modulo suministra la opción de ingresar una IP de test en el backend que sobreescribirá la IP real del usuario y también brinda la opción de pasar la IP como parámetro en la URL.</p>
+<p><strong>Posibles mejoras</strong></p>
+<p>La mejora que tal vez sea mas importante en sistemas que hagan uso intensivo del servicio sea mover la información a la database de <a href="https://magento.com/">Magento</a> para mejorar la velocidad de las consultas y sacar ventajas de los caches de la database.</p>
+<p>Si alguien tiene alguna sugerencia pueden enviármela para que la evalúe.</p>
+<p><strong>Cuidado!</strong></p>
+<p>Si tu sistema esta instalado detrás de un Firewall, use el servicio de <a href="https://www.cloudflare.com">Cloudflare</a> o <a href="https://www.nginx.com/">NGINX</a> es muy posible que el sistema detecte una IP que no sea la IP publica de la visita.</p>
+<p>Esto no es un problema causado o que puede ser resuelto por el código del modulo, lo advierto porque es bastante común que nuestro sistema funcione a la perfección en nuestro servidor de staging y sea un desastre cuando lo enviamos a producción.</p>
+<p><strong>Instalación</strong></p>
+<p>Si bien se puede hacer la instalación manualmente (<a href="https://github.com/olivertar/m2_geoip),">https://github.com/olivertar/m2_geoip),</a> yo recomiendo usar composer ya que se encarga de instalar las dependencias automáticamente (<!-- raw HTML omitted -->GeoIP2 PHP API<!-- raw HTML omitted -->).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ composer require orangecat/geoip
+</code></pre></div><p>El módulo fue desarrollado en <a href="https://magento.com/">Magento</a> versión 2.3.4 y probablemente no sea compatible con versiones anteriores.</p>
+<p>Espero que el módulo pueda ser útil para algún desarrollador y/o sirva de inspiración para algún otro desarrollo.</p>
+<p><strong>Referencias</strong></p>
+<p><a href="https://dev.maxmind.com/geoip/geoip2/geolite2/">GeoLite2 Free Downloadable Databases</a></p>
+<p><a href="https://github.com/olivertar/m2_geoip">https://github.com/olivertar/m2_geoip</a></p>
+<p><a href="https://github.com/maxmind/GeoIP2-php">https://github.com/maxmind/GeoIP2-php</a></p>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/contribution-to-the-debate-about-the-organization-of-magento-development-teams/" data-toggle="tooltip" data-placement="top" title="Contribution to the debate about the organization of Magento development teams">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/teoria-de-grafos-en-la-organizacion-de-equipos-de-desarrollo/" data-toggle="tooltip" data-placement="top" title="Teoría de grafos en la organización de equipos de desarrollo">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/olivertar">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/oliveriogombert/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; olivert 2023
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>

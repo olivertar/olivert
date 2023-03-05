@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on olivert</title>
+    <link>https://olivertar.github.io/categories/</link>
+    <description>Recent content in Categories on olivert</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Sun, 19 Feb 2023 21:22:49 +0000</lastBuildDate>
+    
+	<atom:link href="https://olivertar.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>General</title>
+      <link>https://olivertar.github.io/categories/general/</link>
+      <pubDate>Sun, 19 Feb 2023 21:22:49 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/categories/general/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Productividad</title>
+      <link>https://olivertar.github.io/categories/productividad/</link>
+      <pubDate>Sun, 19 Feb 2023 19:24:34 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/categories/productividad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Magento</title>
+      <link>https://olivertar.github.io/categories/magento/</link>
+      <pubDate>Sat, 16 Oct 2021 01:01:29 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/categories/magento/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shopware</title>
+      <link>https://olivertar.github.io/categories/shopware/</link>
+      <pubDate>Sat, 16 Oct 2021 01:01:29 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/categories/shopware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PWA</title>
+      <link>https://olivertar.github.io/categories/pwa/</link>
+      <pubDate>Thu, 06 May 2021 17:55:00 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/categories/pwa/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

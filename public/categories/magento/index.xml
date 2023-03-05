@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Magento on olivert</title>
+    <link>https://olivertar.github.io/categories/magento/</link>
+    <description>Recent content in Magento on olivert</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Sat, 16 Oct 2021 01:01:29 +0000</lastBuildDate>
+    
+	<atom:link href="https://olivertar.github.io/categories/magento/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reacticon 4 – Novedades del mundo frontend de Magento y Shopware</title>
+      <link>https://olivertar.github.io/reacticon-4-novedades-del-mundo-frontend-de-magento-y-shopware/</link>
+      <pubDate>Sat, 16 Oct 2021 01:01:29 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/reacticon-4-novedades-del-mundo-frontend-de-magento-y-shopware/</guid>
+      <description>Esta semana se ha desarrollado la cuarta edición de “Reacticon“. (11-14 Octubre 2021)
+Mi primer conclusión, y lo que mas celebro, es que han demostrado que es posible organizar eventos de gran nivel sin el apoyo de grandes empresas.
+En segundo lugar es destacable la cantidad de alternativas que están surgiendo y desarrollándose para optimizar los frontend, que al menos en el caso de Magento 2 es bastante pobre.
+En el sitio de Reacticon esta el programa del evento y en el canal de Youtube de Jisse (@jissereitsma) están publicados los videos de las conferencias que pienso vale la pena mirar.</description>
+    </item>
+    
+    <item>
+      <title>Como hacer un patch para Magento 2</title>
+      <link>https://olivertar.github.io/como-hacer-un-patch-para-magento-2/</link>
+      <pubDate>Mon, 10 Aug 2020 17:44:09 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/como-hacer-un-patch-para-magento-2/</guid>
+      <description>Magento 2 tiene métodos que permiten modificar comportamientos determinados por los módulos de core de Magento o módulos de terceros instalados con composer. Plugin, Rewrite, etc
+Pero que pasa cuando las modificaciones necesarias son producto de un error (bug) y no de un requerimiento para modificar la plataforma?
+En algunos casos es posible mediante los mecanismos de Magento modificar el comportamiento y corregir el bug, pero en otros no y hacer modificaciones al core no es una opción ya que los cambios se perderían (ademas de ser considerado una mala practica) cada vez que corremos composer install.</description>
+    </item>
+    
+    <item>
+      <title>Nueva versión Magento 2.4</title>
+      <link>https://olivertar.github.io/nueva-version-magento-2-4/</link>
+      <pubDate>Mon, 03 Aug 2020 10:40:49 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/nueva-version-magento-2-4/</guid>
+      <description>Finalmente vio la luz la tan anunciada versión 2.4 de Magento.
+Es una versión que como todo salto de versión incorpora características nuevas y lo que probablemente sea mas importante, a la hora de pensar en actualizar nuestro sitio o desarrollar código nuevo, son las cosas que dejan de existir o que tienen una nueva manera de hacerse.
+Por eso es uno de esos casos donde pasa a ser muy recomendable leer las notas de la versión y prestar especial atención a la parte de incompatibilidades con versiones anteriores (backward incompatible changes)</description>
+    </item>
+    
+    <item>
+      <title>ABM multistore genérico para Magento 2</title>
+      <link>https://olivertar.github.io/abm-multistore-generico-para-magento-2/</link>
+      <pubDate>Sat, 25 Jul 2020 23:02:02 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/abm-multistore-generico-para-magento-2/</guid>
+      <description>Los últimos meses estuve trabajando en migrar sitios de Magento 1 a Magento 2.
+En muchos casos tuve que migrar código que, con mas o menos características, eran simples ABM (CRUD en ingles).
+Para no estar reinventando la rueda y mejorar la mantenibilidad del código hice un modulo base sobre el que parto cada vez que necesito un ABM.
+La premisa fue que sea los lo mas genérico posible y cumpla con los estándares de Magento en cuanto a la implementación de contratos de servicios y demás buenas practicas.</description>
+    </item>
+    
+    <item>
+      <title>Magento 2 – Modulo “Upload File” en formulario de registro</title>
+      <link>https://olivertar.github.io/magento-2-modulo-upload-file-en-formulario-de-registro/</link>
+      <pubDate>Tue, 07 Jul 2020 21:21:35 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/magento-2-modulo-upload-file-en-formulario-de-registro/</guid>
+      <description>Módulo básico para Magento 2 que puede servir si queremos pedirle al usuario que suministre una foto / avatar en el momento de registrarse o algún tipo de documentación, este uso mas común en sitios B2B.
+Para los que se están iniciando, mirando el código pueden aprender:
+ Como crear un atributo tipo “file” en la entidad “customer” Como crear opciones de configuración para un modulo (System.xml) Como “deshabilitar” el modulo en el frontend desde la configuración Como manipular layouts y templates Como enmascarar una URL de descarga para no exponer las rutas del servidor.</description>
+    </item>
+    
+    <item>
+      <title>Como conectar un modulo de Magento 2 a diferentes instalaciones (y que funcione 100%)</title>
+      <link>https://olivertar.github.io/como-conectar-un-modulo-de-magento-2-a-diferentes-instalaciones/</link>
+      <pubDate>Fri, 03 Jul 2020 03:58:42 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/como-conectar-un-modulo-de-magento-2-a-diferentes-instalaciones/</guid>
+      <description>En muchas oportunidades necesitamos probar un modulo de Magento 2 en diferentes versiones o en diferentes proyectos.
+Esto es muy común si estamos desarrollando un modulo independiente de algún proyecto especifico o si brindamos soporte para alguna extensión.
+En estos casos lo recomendable es que el código del modulo se encuentre fuera de la instalación de Magento y que pueda ser compartido por varias instalaciones mediante enlaces simbólicos (symlinks)
+De esta manera, si hacemos alguna modificación al código, esta impactará automáticamente en todos los lugares que estén enlazados.</description>
+    </item>
+    
+    <item>
+      <title>Magento 2 – Modificando el menú de la cuenta de usuario</title>
+      <link>https://olivertar.github.io/modificando-el-menu-de-la-cuenta-de-usuario/</link>
+      <pubDate>Thu, 04 Jun 2020 20:32:03 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/modificando-el-menu-de-la-cuenta-de-usuario/</guid>
+      <description>Es común que a los desarrolladores nos soliciten modificar el menú que se muestra en la sección “My Account”
+Lo mas común es remover algún ítem, cambiar el orden o agregar algún ítem nuevo.
+Para eliminar o alterar el orden de los ítems lo que tenemos que hacer es agregar información al layout “customer_account.xml” del modulo Magento Customer
+La manera de hacerlo es extendiendo el layout “customer_account.xml” en nuestro theme personalizado</description>
+    </item>
+    
+    <item>
+      <title>Magento 1 – ambiente Docker con PHP 5.4</title>
+      <link>https://olivertar.github.io/magento-1-ambiente-docker/</link>
+      <pubDate>Fri, 15 May 2020 13:47:40 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/magento-1-ambiente-docker/</guid>
+      <description>Recientemente un antiguo cliente me contacto porque tenia un problema con la integración de Paypal.
+En realidad el problema no era Paypal sino que la versión de Magento que estaban usando era 1.7.0.2 y la integración incluida en Magento ya no funcionaba o no lo hacia como el cliente necesitaba.
+Es el típico caso donde el sitio funciona mas o menos bien (cuestiones de seguridad al margen) y ha sido personalizado de tal manera que se dificulta, ya no la migración a M2 sino la actualización de M1.</description>
+    </item>
+    
+    <item>
+      <title>Magento and CSP</title>
+      <link>https://olivertar.github.io/magento-and-csp/</link>
+      <pubDate>Wed, 29 Apr 2020 13:35:56 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/magento-and-csp/</guid>
+      <description>CSP, “Content Security Policy” o “Politica de seguridad de contenidos” en español son una serie de reglas que determinan desde que origenes y que tipos de contenidos pueden ser descargados por un cliente web.
+Permiten limitar los ataques XSS (cross-site scripting) y la inyeccion de codigo.
+En terminos practicos se traducen en cabeceras (headers) que se le envian al browser con cada peticion (request).
+Magento 2.3.5 incluye un mecanismo con el cual fácilmente podemos administrar esas reglas.</description>
+    </item>
+    
+    <item>
+      <title>Geolocalización por IP – Modulo para Magento 2</title>
+      <link>https://olivertar.github.io/geolocalizacion-por-ip-modulo-para-magento-2/</link>
+      <pubDate>Tue, 03 Mar 2020 21:48:22 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/geolocalizacion-por-ip-modulo-para-magento-2/</guid>
+      <description>Recientemente hice una prueba técnica para aplicar a un empleo, en uno de los requerimientos se solicitaba geolocalizar al usuario partiendo de su IP.
+Esto me dio pie para desarrollar un modulo para Magento 2 que hace tiempo tenia ganas de hacer. (https://github.com/olivertar/m2_geoip)
+Un poco de historia
+En las épocas doradas de Magento 1 este tipo de módulos florecían como hongos, la gran mayoría utilizaban un servicio de terceros que permitía conocer la procedencia de una IP.</description>
+    </item>
+    
+    <item>
+      <title>Contribution to the debate about the organization of Magento development teams</title>
+      <link>https://olivertar.github.io/contribution-to-the-debate-about-the-organization-of-magento-development-teams/</link>
+      <pubDate>Mon, 17 Feb 2020 15:13:42 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/contribution-to-the-debate-about-the-organization-of-magento-development-teams/</guid>
+      <description>For the development process to be carried out, there is necessarily an analysis practice to convert the client’s need into a “requirement” and a “architecture” job to define how that requirement will be implemented.
+These two tasks are always present, it would not be possible to move forward without doing this.
+I have noticed in many cases that agencies do not do this analysis / architecture process or do so very limited.</description>
+    </item>
+    
+    <item>
+      <title>Vue Storefront &#43; Magento 2 – Instalación de Vue Storefront en local – tercera parte</title>
+      <link>https://olivertar.github.io/vue-storefront-magento-2-instalacion-de-vue-storefront-en-local-tercera-parte/</link>
+      <pubDate>Tue, 28 Jan 2020 14:23:21 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/vue-storefront-magento-2-instalacion-de-vue-storefront-en-local-tercera-parte/</guid>
+      <description>Este articulo contiene información complementaria que no fue incluida en artículos anteriores para no distraer la atención del foco principal.
+Detener todas las instancias de Vue Storefront
+En teoría “node killall” debería detenerlas, pero al menos en mi caso eso no sucede.
+Si tenes el proceso corriendo en un terminal, “CTRL + C” deberia matarlo, pero si esto tampoco resulta la alternativa, siempre hablando de sistemas Linux, es matar los procesos que corren en el puerto 3000 y 8080 (si estos fueron los puertos donde fue lanzado)</description>
+    </item>
+    
+    <item>
+      <title>Vue Storefront &#43; Magento 2 – Instalación de Vue Storefront en local – segunda parte</title>
+      <link>https://olivertar.github.io/vue-storefront-magento-2-instalacion-de-vue-storefront-en-local-segunda-parte/</link>
+      <pubDate>Tue, 21 Jan 2020 13:00:06 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/vue-storefront-magento-2-instalacion-de-vue-storefront-en-local-segunda-parte/</guid>
+      <description>El ultimo paso para completar la instalación de Vue Sotrefront en local es instalar Magento – Vue Storefront y sincronizar los datos.
+Clonamos el repositorio
+$ git clone https://github.com/DivanteLtd/mage2vuestorefront.git mage2vs Luego vamos al directorio “src” y lo instalamos
+$ cd mage2vs/src $ npm install Este es el punto donde cambiaremos manualmente algunas configuraciones para conectarnos a nuestro backend Magento 2 + Sample data.
+Editamos el archivo “src/config.js” y buscamos la seccion “magento: {”</description>
+    </item>
+    
+    <item>
+      <title>Vue Storefront &#43; Magento 2 – Instalación de Vue Storefront en local – primera parte</title>
+      <link>https://olivertar.github.io/vue-storefront-magento-2-instalacion-de-vue-storefront-en-local-primera-parte/</link>
+      <pubDate>Tue, 14 Jan 2020 10:17:44 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/vue-storefront-magento-2-instalacion-de-vue-storefront-en-local-primera-parte/</guid>
+      <description>En este articulo comenzaremos a instalar Vue Storefront en el entorno local y conectarlo con una instancia de Magento 2 + sample data mediante el usuario API que configuré en un articulo anterior.
+Los requisitos para la instalación es que tengamos en nuestro entorno:
+ Docker Node JS Yarn Imagemagick  Vue Storefront usa Redis. Por lo tanto si tienen alguna instancia de Redis corriendo sugiero detenerla para evitar conflictos con los puertos (podríamos modificarlos pero eso agrega complejidad al asunto).</description>
+    </item>
+    
+    <item>
+      <title>Vue Storefront &#43; Magento 2 – introducción</title>
+      <link>https://olivertar.github.io/vue-storefront-magento-2-introduccion/</link>
+      <pubDate>Sun, 01 Dec 2019 01:34:00 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/vue-storefront-magento-2-introduccion/</guid>
+      <description>Intentaré documentar en una serie de artículos como implementar Vue Storefront con Magento 2.
+Si bien Magento 2 a partir en las versiones 2.3.x incorpora PWA Studio, al menos por ahora, no parece ser un producto lo suficientemente maduro y amigable.
+Para ajustarse a la verdad Magentonos dice que PWA Studio es una suite de herramientas para hacer una PWA.
+Como desarrollador, pienso que en la mayoría de los casos es conveniente trabajar con un producto que tener que crear el producto con una suite de herramientas, esto ultimo parece muy emocionante pero tiene altos costos adicionales.</description>
+    </item>
+    
+    <item>
+      <title>Grunt para compilar less en Magento 2</title>
+      <link>https://olivertar.github.io/grunt-para-compilar-less-en-magento-2/</link>
+      <pubDate>Thu, 14 Nov 2019 21:20:00 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/grunt-para-compilar-less-en-magento-2/</guid>
+      <description>Magento 2, por defecto, utiliza less como lenguaje dinámico de CSS.
+Esto significa que debemos compilar el código less para transformarlo en CSS y que sea interpretado por los navegadores.
+Magento recomienda el uso de Grunt para esto. La finalidad de este articulo es mostrar como proceder para instalarlo en un SO Ubuntu y utilizarlo en nuestro proyecto Magento 2.
+Grunt requiere Node JS para funcionar, entonces el primer paso es instalar Node JS si es que no lo tenemos instalado.</description>
+    </item>
+    
+  </channel>
+</rss>

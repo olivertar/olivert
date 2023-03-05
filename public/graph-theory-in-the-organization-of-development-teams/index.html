@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="olivert">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="/img/placeholder.jpg">
+    <meta property="twitter:image" content="/img/placeholder.jpg" />
+    
+
+    
+    <meta name="title" content="Graph theory in the organization of development teams" />
+    <meta property="og:title" content="Graph theory in the organization of development teams" />
+    <meta property="twitter:title" content="Graph theory in the organization of development teams" />
+    
+
+    
+    <meta name="description" content="Magento y otras cosas también">
+    <meta property="og:description" content="Magento y otras cosas también" />
+    <meta property="twitter:description" content="Magento y otras cosas también" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Graph theory in the organization of development teams | olivert | Oliverio Gombert Blog</title>
+
+    <link rel="canonical" href="/graph-theory-in-the-organization-of-development-teams/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-155812403-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">olivert</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/general">general</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/magento">magento</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/productividad">productividad</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/pwa">pwa</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/shopware">shopware</a>
+                        </li>
+                        
+                    
+                    
+		    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/placeholder.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>Graph theory in the organization of development teams</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                olivertar
+                             
+                            on 
+                            Thursday, March 12, 2020
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <p>Although the original idea of this post was to reflect on the possibilities of <a href="https://en.wikipedia.org/wiki/Graph_theory">graph theory</a> to improve the organization of development teams, I changed my mind. Sorry.</p>
+<p>Well, if many companies that have always criticized remote work now encourage it, fueled by panic at COVID 19, I think I can also change course in this simple post. So if you are interested in graph theory you may not want to continue reading…</p>
+<p>While trying to match team members and tasks with vertices and edges of a graph, I remembered how my relationship with mathematics began.</p>
+<p>I think it has happened to many, as a boy I hated mathematics (my world was a soccer ball and a bicycle) or as I would later discover, I could not understand mathematics and that was what made me hate them.</p>
+<p>Sooner rather than later, in high school, understanding and managing math was more than a must. Since I was very young I had decided to study electronics and not understanding mathematics practically left me without possibilities.</p>
+<p>Needless to say, the first 2 years were really complicated but I had managed to have a level of mediocrity enough to pass.</p>
+<p>In my third year of high school things changed, not only because mathematics became more complex by incorporating trigonometry, logarithms, etc etc but mainly because of the teacher I had that year.</p>
+<p>To make this story short, one of those teachers who give you a choice between the red and the green pill, knowing in advance which one you are going to choose.</p>
+<p>I really couldn’t tell what the secret was, but basically it was about showing us the problems and giving us a framework where we could think and solve them. I remember that the solution to a mathematical problem only got a name and was theorized after understanding how to solve it. Pythagoras, Pi, Sine, Cosine, etc.</p>
+<p>From that moment on, my vision of mathematics changed, I could even say that I became interested at least enough to achieve an acceptable mediocrity that allowed me to handle mathematical analysis and obtain my degree in electronics without problems.</p>
+<p>Many years later, after several sabbatical years, without using mathematics and having changed my interests regarding what to study, when I studied Mathematics I in college while studying <!-- raw HTML omitted -->industrial design<!-- raw HTML omitted -->, I had another teacher with similar characteristics that refreshed the feeling of satisfaction in understanding or solving a mathematical problem.</p>
+<p>Both teachers shared the criterion of guiding without imposing and despite having spent years teaching the same knowledge, they maintained their enthusiasm and interest in what they were teaching.</p>
+<p>They also shared the gender, both were women and were advanced in age.</p>
+<p>I could say that they taught me to think, or rather, to think orderly.</p>
+<p>Taking advantage of the closeness with the international women’s day, on behalf of these two anonymous women for the vast majority, I want to highlight the role of women and older adults who are often left aside without considering their experience just because they are “ old”.</p>
+<p>I think that when we talk about opportunities, the real opportunities are to have teachers with these characteristics.</p>
+<p>Well, so that this post does not become a TED talk and serves at least as a consolation prize to those who were interested in the article and hoped to find something that would improve the way the software development teams work, I could say that companies, that have a long-term plan, should be aware of the importance of fostering a training culture that is related to natural learning so that the growth of their teams is not a bottleneck.</p>
+<p>In any case, my thanks to Professors Gonzalez and <a href="https://en.wikipedia.org/wiki/Vera_W._de_Spinadel">Vera Martha Winitzky Spinadel</a> for helping me to use my brain a little more.</p>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/teoria-de-grafos-en-la-organizacion-de-equipos-de-desarrollo/" data-toggle="tooltip" data-placement="top" title="Teoría de grafos en la organización de equipos de desarrollo">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/magento-and-csp/" data-toggle="tooltip" data-placement="top" title="Magento and CSP">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/olivertar">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/oliveriogombert/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; olivert 2023
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>

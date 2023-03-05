@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>extension on olivert</title>
+    <link>https://olivertar.github.io/tags/extension/</link>
+    <description>Recent content in extension on olivert</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Thu, 07 Oct 2021 21:38:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://olivertar.github.io/tags/extension/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Shopware 6 – Configurar el lenguaje de la tienda</title>
+      <link>https://olivertar.github.io/shopware-6-configurar-el-lenguaje-de-la-tienda/</link>
+      <pubDate>Thu, 07 Oct 2021 21:38:00 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/shopware-6-configurar-el-lenguaje-de-la-tienda/</guid>
+      <description>Muy probablemente los idiomas que vienen instalados por defecto no sean suficientes o los necesarios para nuestro proyecto.
+En un post anterior usamos como ejemplo para mostrar como instalar extensiones el “pack de idiomas”, partiendo de ese punto vamos a mostrar como, una vez instalada y activada la extensión, configurar Shopware 6 para utilizar el idioma Español.
+El primer paso es configurar cuales idiomas estarán disponibles para los “canales de venta” (Sales Channels) y en el administrador.</description>
+    </item>
+    
+    <item>
+      <title>Shopware 6 – Instalar extensiones / plugins</title>
+      <link>https://olivertar.github.io/shopware-6-instalar-extensiones-plugins/</link>
+      <pubDate>Fri, 01 Oct 2021 00:10:02 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/shopware-6-instalar-extensiones-plugins/</guid>
+      <description>Shopware 6 tiene diferentes mecanismos para instalar extensiones.
+En este post veremos cómo instalar una extensión existente en el Marketplace de Shopware
+Vamos a tomar como ejemplo la extensión &amp;ldquo;Shopware Language Pack&amp;rdquo; disponible para versiones mayores a 6.3.5.0
+https://store.shopware.com/en/swag338126230916f/shopware-language-pack.html
+Shopware nos permite instalar de 3 maneras
+  Desde el menú &amp;ldquo;Extensions &amp;gt; Store&amp;rdquo; del panel de administración de nuestro proyecto
+  Descargando el código de la extensión desde el marketplace</description>
+    </item>
+    
+    <item>
+      <title>ABM multistore genérico para Magento 2</title>
+      <link>https://olivertar.github.io/abm-multistore-generico-para-magento-2/</link>
+      <pubDate>Sat, 25 Jul 2020 23:02:02 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/abm-multistore-generico-para-magento-2/</guid>
+      <description>Los últimos meses estuve trabajando en migrar sitios de Magento 1 a Magento 2.
+En muchos casos tuve que migrar código que, con mas o menos características, eran simples ABM (CRUD en ingles).
+Para no estar reinventando la rueda y mejorar la mantenibilidad del código hice un modulo base sobre el que parto cada vez que necesito un ABM.
+La premisa fue que sea los lo mas genérico posible y cumpla con los estándares de Magento en cuanto a la implementación de contratos de servicios y demás buenas practicas.</description>
+    </item>
+    
+    <item>
+      <title>Magento 2 – Modulo “Upload File” en formulario de registro</title>
+      <link>https://olivertar.github.io/magento-2-modulo-upload-file-en-formulario-de-registro/</link>
+      <pubDate>Tue, 07 Jul 2020 21:21:35 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/magento-2-modulo-upload-file-en-formulario-de-registro/</guid>
+      <description>Módulo básico para Magento 2 que puede servir si queremos pedirle al usuario que suministre una foto / avatar en el momento de registrarse o algún tipo de documentación, este uso mas común en sitios B2B.
+Para los que se están iniciando, mirando el código pueden aprender:
+ Como crear un atributo tipo “file” en la entidad “customer” Como crear opciones de configuración para un modulo (System.xml) Como “deshabilitar” el modulo en el frontend desde la configuración Como manipular layouts y templates Como enmascarar una URL de descarga para no exponer las rutas del servidor.</description>
+    </item>
+    
+    <item>
+      <title>Geolocalización por IP – Modulo para Magento 2</title>
+      <link>https://olivertar.github.io/geolocalizacion-por-ip-modulo-para-magento-2/</link>
+      <pubDate>Tue, 03 Mar 2020 21:48:22 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/geolocalizacion-por-ip-modulo-para-magento-2/</guid>
+      <description>Recientemente hice una prueba técnica para aplicar a un empleo, en uno de los requerimientos se solicitaba geolocalizar al usuario partiendo de su IP.
+Esto me dio pie para desarrollar un modulo para Magento 2 que hace tiempo tenia ganas de hacer. (https://github.com/olivertar/m2_geoip)
+Un poco de historia
+En las épocas doradas de Magento 1 este tipo de módulos florecían como hongos, la gran mayoría utilizaban un servicio de terceros que permitía conocer la procedencia de una IP.</description>
+    </item>
+    
+  </channel>
+</rss>

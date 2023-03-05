@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>idioma on olivert</title>
+    <link>https://olivertar.github.io/tags/idioma/</link>
+    <description>Recent content in idioma on olivert</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Thu, 07 Oct 2021 21:38:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://olivertar.github.io/tags/idioma/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Shopware 6 – Configurar el lenguaje de la tienda</title>
+      <link>https://olivertar.github.io/shopware-6-configurar-el-lenguaje-de-la-tienda/</link>
+      <pubDate>Thu, 07 Oct 2021 21:38:00 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/shopware-6-configurar-el-lenguaje-de-la-tienda/</guid>
+      <description>Muy probablemente los idiomas que vienen instalados por defecto no sean suficientes o los necesarios para nuestro proyecto.
+En un post anterior usamos como ejemplo para mostrar como instalar extensiones el “pack de idiomas”, partiendo de ese punto vamos a mostrar como, una vez instalada y activada la extensión, configurar Shopware 6 para utilizar el idioma Español.
+El primer paso es configurar cuales idiomas estarán disponibles para los “canales de venta” (Sales Channels) y en el administrador.</description>
+    </item>
+    
+  </channel>
+</rss>

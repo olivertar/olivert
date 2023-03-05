@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="olivert">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="/img/placeholder.jpg">
+    <meta property="twitter:image" content="/img/placeholder.jpg" />
+    
+
+    
+    <meta name="title" content="Shopware 6 – Introducción" />
+    <meta property="og:title" content="Shopware 6 – Introducción" />
+    <meta property="twitter:title" content="Shopware 6 – Introducción" />
+    
+
+    
+    <meta name="description" content="Magento y otras cosas también">
+    <meta property="og:description" content="Magento y otras cosas también" />
+    <meta property="twitter:description" content="Magento y otras cosas también" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Shopware 6 – Introducción | olivert | Oliverio Gombert Blog</title>
+
+    <link rel="canonical" href="/shopware-6-introduccion/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-155812403-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">olivert</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/general">general</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/magento">magento</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/productividad">productividad</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/pwa">pwa</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/shopware">shopware</a>
+                        </li>
+                        
+                    
+                    
+		    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/placeholder.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/api-first" title="api first">
+                            api first
+                        </a>
+                        
+                        <a class="tag" href="/tags/ecommerce" title="ecommerce">
+                            ecommerce
+                        </a>
+                        
+                        <a class="tag" href="/tags/pwa" title="pwa">
+                            pwa
+                        </a>
+                        
+                        <a class="tag" href="/tags/shopware" title="shopware">
+                            shopware
+                        </a>
+                        
+                        <a class="tag" href="/tags/shopware-6" title="shopware 6">
+                            shopware 6
+                        </a>
+                        
+                    </div>
+                    <h1>Shopware 6 – Introducción</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                olivertar
+                             
+                            on 
+                            Thursday, May 6, 2021
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <p><a href="href=%22https://www.shopware.com/en/">Shopware</a> es una plataforma de comercio electrónico que está creciendo rápidamente.</p>
+<p>Para aquellos que están interesados en conocer o van a trabajar con esta plataforma pienso que es muy valioso conocer el enfoque de desarrollo y como está estructurada la plataforma. Esto no solamente permitirá tener mejor perspectiva al evaluar la plataforma sino que también saber qué es exactamente lo que estamos haciendo cuando lo instalemos.</p>
+<p><a href="href=%22https://www.shopware.com/en/">Shopware</a> <a href="https://www.ionos.es/digitalguide/servidores/know-how/que-es-on-premises/">on-premise</a> es open source y gratuito pero hay versiones pagas que se diferencian por tener características exclusivas basadas en plugins. Esto significa que las versiones Professional y Enterprice comparten el mismo código de la versión gratuita. También existe una versión “Cloud” paga.</p>
+<p>Tiene un enfoque “<a href="https://swagger.io/resources/articles/adopting-an-api-first-approach/">API First</a>” (traducido al castellano seria “basado en API”)</p>
+<p>Open Source, Gratuito y API First son características que busco en un producto porque, desde mi punto de vista, son atributos necesarios para que un producto tenga chances de crecer en el contexto actual.</p>
+<p><a href="href=%22https://www.shopware.com/en/">Shopware</a> es una plataforma basada en el framework de <a href="https://www.php.net/">PHP</a> <a href="href=%22https://symfony.es/">Symfony</a>.</p>
+<p>Recientemente liberaron una nueva versión, <a href="https://www.shopware.com/en/products/shopware-6/">Shopware 6.4</a>, usa <!-- raw HTML omitted -->Symfony<!-- raw HTML omitted --> 5.2 y el requerimiento mínimo de <!-- raw HTML omitted -->PHP<!-- raw HTML omitted --> es 7.4 aunque ya es compatible con <!-- raw HTML omitted -->PHP<!-- raw HTML omitted --> 8. Que mantengan actualizado los componentes que dan soporte a la plataforma es un buen indicador de la salud del proyecto.</p>
+<p><a href="href=%22https://www.shopware.com/en/">Shopware</a> esta estructurado en varios componentes independientes creados con <a href="href=%22https://www.drauta.com/que-son-los-bundles-de-symfony">bundles de Symfony</a>.</p>
+<p>En el centro del sistema se encuentra el componente “Core” que es quien provee las APIs además de tener el Framework y la lógica de negocios.</p>
+<p>Todos los otros componentes existentes interactúan con el Core a través de sus APIs</p>
+<p><strong>Admin API</strong>, que se utiliza para todas las tareas de administración, es consumida por el “Administration Component” (Vue.js SPA).</p>
+<p>A través de este API tenemos acceso a todas las entidades de <a href="https://www.shopware.com/en/products/shopware-6/">Shopware 6</a> y todos los procedimientos ABM (CRUD)</p>
+<p><strong>Store API</strong>, que se utiliza para interactuar con los clientes, es consumida por el “Storefront component” y por “Shopware PWA”</p>
+<p>Otra de las características del componente Core es que tiene un sistema de extensión que nos permite crear plugins, themes y apps.</p>
+<p>El código de <a href="href=%22https://www.shopware.com/en/">Shopware</a>, si bien esta formado por componentes separados, conviven en un mismo <a href="href=%22https://en.wikipedia.org/wiki/Monorepo">monorepo</a> en <a href="href=%22https://github.com/shopware/platform">Github, shopware/platform</a>, donde cada componente tiene su repositorio.</p>
+<p>Para su instalación <a href="href=%22https://www.shopware.com/en/">Shopware</a> ofrece 2 “<em>templates</em>” para la instalación, <strong>Production</strong> y <strong>Development</strong>, que elegiremos de acuerdo a lo que necesitemos hacer.</p>
+<p>Tarea                                                         shopware/producción                shopware/desarrollo</p>
+<p>Contribución al core de Shopware                          ❌                                              ✅</p>
+<p>Desarrollo de extensiones para la tienda                ✅                                             ✅ (preferentemente)</p>
+<p>Proyecto personalizado / desarrollo                        ✅                                             ❌</p>
+<p>Manejo de dependencias / bundles                        ✅                                              ❌</p>
+<p>Los “<em>templates</em>” son repositorios donde están “<em>configuradas</em>” las dependencias y herramientas necesarias para cada tipo de propósito de instalación.</p>
+<p>Development: <a href="https://github.com/shopware/development">https://github.com/shopware/development</a></p>
+<p>Production: <a href="https://github.com/shopware/production">https://github.com/shopware/production</a></p>
+<p>Otra de las funciones que cumplen los “<em>templates</em>” es brindar todo lo necesario para las diferentes propuestas de entorno de instalación que nos da <!-- raw HTML omitted -->Shopware<!-- raw HTML omitted -->: Docker, Dockware, Valet+, MAMP y from-scratch</p>
+<p>Es en este punto que se recomienda mirar un poco algunos archivos de los “<em>templates</em>“: composer.json y docker-compose.yml </p>
+<p>Pienso que esta es la información mínima necesaria para encarar el próximo paso que es la instalación de <!-- raw HTML omitted -->Shopware 6<!-- raw HTML omitted --> en nuestro entorno local.</p>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/como-hacer-un-patch-para-magento-2/" data-toggle="tooltip" data-placement="top" title="Como hacer un patch para Magento 2">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/shopware-6-instalacion-plantillas/" data-toggle="tooltip" data-placement="top" title="Shopware 6 – Instalación parte 1 – Plantillas">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/olivertar">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/oliveriogombert/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; olivert 2023
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>

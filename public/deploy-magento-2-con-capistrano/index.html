@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="olivert">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="/img/placeholder.jpg">
+    <meta property="twitter:image" content="/img/placeholder.jpg" />
+    
+
+    
+    <meta name="title" content="Deploy Magento 2 con Capistrano" />
+    <meta property="og:title" content="Deploy Magento 2 con Capistrano" />
+    <meta property="twitter:title" content="Deploy Magento 2 con Capistrano" />
+    
+
+    
+    <meta name="description" content="Magento y otras cosas también">
+    <meta property="og:description" content="Magento y otras cosas también" />
+    <meta property="twitter:description" content="Magento y otras cosas también" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Deploy Magento 2 con Capistrano | olivert | Oliverio Gombert Blog</title>
+
+    <link rel="canonical" href="/deploy-magento-2-con-capistrano/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-155812403-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">olivert</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/general">general</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/magento">magento</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/productividad">productividad</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/pwa">pwa</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/shopware">shopware</a>
+                        </li>
+                        
+                    
+                    
+		    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/placeholder.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>Deploy Magento 2 con Capistrano</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                olivertar
+                             
+                            on 
+                            Wednesday, January 8, 2020
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <p>Para aquellos que no lo sepan, <a href="https://capistranorb.com/">Capistrano</a> es una herramienta para hacer deploy desarrollada en y para <a href="https://www.ruby-lang.org/">Ruby</a>, no obstante se puede utilizar para hacer deploy de otros idiomas diferentes a <a href="https://www.ruby-lang.org/">Ruby</a>.</p>
+<p>En este post vamos a ver como utilizar <a href="https://capistranorb.com/">Capistrano</a> para hacer un deploy de nuestro proyecto <a href="https://magento.com/">Magento</a> y correr tareas adicionales post deploy en el servidor de destino.</p>
+<p>Una de las caracteristicas de esta herramienta es que genera versiones en el servidor, lo cual permite rapidamente hacer un roll back en caso de que algo no salga bien sin necesidad de hacer cambios en el repositorio.</p>
+<p>Los unicos requisitos que debemos cumplir para el servidor remoto son tener GIT instalado y acceso SSH.</p>
+<p>Despues del primer deploy encontraremos en el servidor una estructura como esta:</p>
+<p>
+  <img src="/wp-content/uploads/2019/12/server_tree.png" alt="screenshot">
+
+</p>
+<p>En cada deploy Capistrano hace un checkout de la rama del repositorio GIT que hayamos configurado.</p>
+<p>El checkout se hace en la carpeta “repo”, copia los archivos a una carpeta nueva dentro del directorio “releases”, instala <a href="https://magento.com/">Magento</a> y realiza todas las operaciones para compilarlo.</p>
+<p>Si todo salio bien, se actualiza un symlink llamado “current” para que apunte a la ultima release. El document root del servidor web del host que aloja nuestro proyecto debe apuntar a “current/pub” para que todo funcione.</p>
+<p>El ultimo punto a tener en cuenta son los archivos que no están incluidos en el repositorio ni son obtenidos con composer durante la instalación. imagenes, sitemaps, env.php etc etc</p>
+<p>Para alojar esas carpetas y/o archivos esta la carpeta “shared”, lo que hacemos es crear los symlinks necesarios dentro de “current”. Podemos crear todos los que necesitemos. Los básicos que requiere <a href="https://magento.com/">Magento</a> (var/media/env.php) y cualquier otro que por algún motivo requiera nuestro proyecto. Por ejemplo dentro de “current/pub”</p>
+<p>
+  <img src="//wp-content/uploads/2019/12/current_symlink-1024x160.png" alt="screenshot">
+
+</p>
+<p>Ahora veamos que necesitamos hacer en nuestra maquina de desarrollo para configurar la herramienta de deploy.</p>
+<p>Como pre condición debemos tener instalado <a href="https://www.ruby-lang.org/">Ruby</a>, y 2 gems.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ gem install capistrano
+$ gem install capistrano-magento2
+</code></pre></div><p>Al árbol de directorios de nuestro proyecto vamos a agregar la carpeta “tools/cap” ahí dentro debemos correr el comando</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cap install
+</code></pre></div><p>
+  <img src="/wp-content/uploads/2019/12/cap_tree_1-1024x280.png" alt="screenshot">
+
+</p>
+<p>Como resultado nuestro árbol quedará como se ve en la imagen</p>
+<p>
+  <img src="/wp-content/uploads/2019/12/cap_tree_2.png" alt="screenshot">
+
+</p>
+<p>Los archivos dentro de “config/deploy” corresponde a la configuración especifica para cada entorno donde queramos hacer un deploy. Podemos tener tantos entornos como queramos.</p>
+<p>Dentro de cada uno de estos archivos encontraremos la información de conexión SSH al servidor, el path base donde sera enviado el proyecto y la rama del repositorio que debe usarse para obtener el código entre otras cosas.</p>
+<p>Mi archivo “production.rb” se ve mas o menos asi:</p>
+<pre><code>server '45.76.xxx.xxx', user: 'ssh_user', roles: %w{app db web}
+
+set :deploy_to, '/var/www/magentovue/'
+set :branch, proc { `git rev-parse --abbrev-ref master`.chomp }
+</code></pre><p>El archivo config/deploy.rb tiene la configuracion generica del deploy. Repositorio, parametros para <a href="https://magento.com/">Magento</a>.</p>
+<p>Mi archivo “deploy.rb” se ve mas o menos asi:</p>
+<pre><code>set :application, &quot;magentovue&quot;
+set :repo_url, &quot;git@bitbucket.org:olivertar/magentovue.git&quot;
+
+set :magento_deploy_languages, ['en_US']
+set :magento_deploy_maintenance, &quot;true&quot;
+set :magento_deploy_themes, ['Magento/backend', 'Magento/luma']
+set :magento_deploy_chmod_d, &quot;0770&quot;
+set :magento_deploy_chmod_f, &quot;0660&quot;
+set :magento_deploy_composer, &quot;true&quot;
+</code></pre><p>El archivo “Capfile” es el mas generico y se utiliza para incluir plugins, establecer paths, etc.</p>
+<p>Mi archivo Capfile se ve mas o menos asi:</p>
+<pre><code># Load DSL and set up stages
+require 'capistrano/setup'
+
+# Load Magento deployment tasks
+require 'capistrano/magento2/deploy'
+require 'capistrano/magento2/pending'
+
+# Load Git plugin
+require &quot;capistrano/scm/git&quot;
+install_plugin Capistrano::SCM::Git
+
+# Load custom tasks from `lib/capistrano/tasks` if you have any defined
+Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
+</code></pre><p>En este punto tenemos lista la configuracion que nos permitiria hacer un deploy a los diferentes entornos, pero como queremos tener la opcion de correr tareas post deploy en el servidor vamos a hacer algunos añadidos.</p>
+<p>Dentro del directorio “lib/capistrano/tasks” agregaremos un archivo “deploy.rake”.</p>
+<p>Este archivo permite escribir comandos shell que se ejecutaran en el servidor diferenciados por entornos.</p>
+<p>Mi archivo deploy.rake se ve mas o menos asi:</p>
+<pre><code>namespace :deploy do
+    task :published do
+        on release_roles :all do
+		# Staging server
+        	if fetch(:stage) == :staging
+	            execute &quot;cp /var/www/magentovue/shared/pub/.htaccess /var/www/magentovue/current/pub/.htaccess&quot;
+	            execute &quot;cd /var/www/magentovue/ &amp;&amp; chown -R magentovue:www-data ./&quot;
+	        end
+
+    		# Live server
+	        if fetch(:stage) == :production
+	            execute &quot;cp /var/www/magentovue/shared/pub/.htaccess /var/www/magentovue/current/pub/.htaccess&quot;
+	            execute &quot;cd /var/www/magentovue/ &amp;&amp; chown -R magentovue:www-data ./&quot;
+	        end
+        end
+    end
+end
+</code></pre><p>Notaran que hay comandos especificos para staging y comandos para produccion. En mi caso lo que hago es cambiar el directorio y copiar el archivo .htaccess del directorio compartido al directorio de la version.</p>
+<p>Ademas, hago un cambio de usuario y grupo de archivos para corregir un problema con la instalación especifica de este proyecto de prueba.</p>
+<p>De la misma manera podemos crear un archivo sh reuniendo varios comandos y correrlo despues del deploy.</p>
+<p>Cuando queramos hacer un deploy debemos ir al directorio tools/caps y correr el comando deploy para un entorno especifico</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd tools/cap
+$ cap staging deploy
+</code></pre></div><p>Si necesitamos hacer un roll back el comando será</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cap staging deploy:rollback ROLLBACK_RELEASE<span style="color:#f92672">=</span><span style="color:#ae81ff">201811141333</span>
+</code></pre></div><p>En este post se han explicado las configuraciones básicas, pueden consultar en github por mas opciones y aplicaciones.</p>
+<p><a href="https://github.com/capistrano/capistrano">https://github.com/capistrano/capistrano</a></p>
+<p><a href="https://github.com/davidalger/capistrano-magento2">https://github.com/davidalger/capistrano-magento2</a></p>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/vue-storefront-magento-2-introduccion/" data-toggle="tooltip" data-placement="top" title="Vue Storefront &#43; Magento 2 – introducción">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/vue-storefront-magento-2-configuracion-de-magento/" data-toggle="tooltip" data-placement="top" title="Vue Storefront &#43; Magento 2 – Configuracion de Magento">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/olivertar">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/oliveriogombert/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; olivert 2023
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>

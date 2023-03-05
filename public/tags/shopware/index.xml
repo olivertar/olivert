@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shopware on olivert</title>
+    <link>https://olivertar.github.io/tags/shopware/</link>
+    <description>Recent content in shopware on olivert</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Thu, 07 Oct 2021 21:38:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://olivertar.github.io/tags/shopware/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Shopware 6 – Configurar el lenguaje de la tienda</title>
+      <link>https://olivertar.github.io/shopware-6-configurar-el-lenguaje-de-la-tienda/</link>
+      <pubDate>Thu, 07 Oct 2021 21:38:00 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/shopware-6-configurar-el-lenguaje-de-la-tienda/</guid>
+      <description>Muy probablemente los idiomas que vienen instalados por defecto no sean suficientes o los necesarios para nuestro proyecto.
+En un post anterior usamos como ejemplo para mostrar como instalar extensiones el “pack de idiomas”, partiendo de ese punto vamos a mostrar como, una vez instalada y activada la extensión, configurar Shopware 6 para utilizar el idioma Español.
+El primer paso es configurar cuales idiomas estarán disponibles para los “canales de venta” (Sales Channels) y en el administrador.</description>
+    </item>
+    
+    <item>
+      <title>Shopware 6 – Instalar extensiones / plugins</title>
+      <link>https://olivertar.github.io/shopware-6-instalar-extensiones-plugins/</link>
+      <pubDate>Fri, 01 Oct 2021 00:10:02 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/shopware-6-instalar-extensiones-plugins/</guid>
+      <description>Shopware 6 tiene diferentes mecanismos para instalar extensiones.
+En este post veremos cómo instalar una extensión existente en el Marketplace de Shopware
+Vamos a tomar como ejemplo la extensión &amp;ldquo;Shopware Language Pack&amp;rdquo; disponible para versiones mayores a 6.3.5.0
+https://store.shopware.com/en/swag338126230916f/shopware-language-pack.html
+Shopware nos permite instalar de 3 maneras
+  Desde el menú &amp;ldquo;Extensions &amp;gt; Store&amp;rdquo; del panel de administración de nuestro proyecto
+  Descargando el código de la extensión desde el marketplace</description>
+    </item>
+    
+    <item>
+      <title>Shopware 6 – Instalación usando Reward</title>
+      <link>https://olivertar.github.io/shopware-6-instalacion-usando-reward/</link>
+      <pubDate>Fri, 21 May 2021 17:54:00 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/shopware-6-instalacion-usando-reward/</guid>
+      <description>Este post documenta como instalar Shopware 6 con el orquestador de docker Reward.
+Reward esta inspirado en Warden pero me parece un poco mas flexible para lo que suelo necesitar en mi estación local para el desarrollo con PHP, Magento 2, Shopware o WordPress.
+Si estas interesado en conocer mas sobre Reward o como instalarlo la documentación es bastante clara.
+Para crear un host usando Reward es imprescindible haberlo levantado, si no lo tenemos corriendo lo hacemos con:</description>
+    </item>
+    
+    <item>
+      <title>Shopware 6 – Instalación parte 3 – Plantilla Production</title>
+      <link>https://olivertar.github.io/shopware-6-instalacion-plantilla-production/</link>
+      <pubDate>Tue, 18 May 2021 18:07:00 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/shopware-6-instalacion-plantilla-production/</guid>
+      <description>Si necesitamos instalar_Shopware 6_ para comenzar un proyecto para una tienda de comercio electrónico debemos utilizar la plantilla “**Production**”
+Cuando utilizamos esta plantilla necesitamos un entorno que cumpla los requerimientos que tiene Shopware 6. Podemos consultar cuales son en la documentación
+Una opción es configurar el stack local con todos los servicios y características necesarias pero será más simple y provechoso utilizar un ambiente “dockerizado”. Por ejemplo Reward o Warden.</description>
+    </item>
+    
+    <item>
+      <title>Shopware 6 – Instalación parte 2 – Plantilla Development</title>
+      <link>https://olivertar.github.io/shopware-6-instalacion-plantilla-development/</link>
+      <pubDate>Fri, 14 May 2021 18:03:00 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/shopware-6-instalacion-plantilla-development/</guid>
+      <description>En un post anterior expliqué que Shopware 6 tiene 2 plantillas distintas para la instalación.
+En este post voy a explicar como usar el “template” “Development“.
+En este caso voy a explicar como instalar Shopware 6 usando el ambiente dockerizado que incluye el “template” “Development“.
+Es requisito que la máquina local donde instalaremos Shopware 6 tenga:
+ PHP 7.4+ CLI docker docker-compose bash  También debemos asegurarnos que el puerto 80 de la máquina no esté ocupado y si lo está debemos detener la aplicación que lo está usando.</description>
+    </item>
+    
+    <item>
+      <title>Shopware 6 – Instalación parte 1 – Plantillas</title>
+      <link>https://olivertar.github.io/shopware-6-instalacion-plantillas/</link>
+      <pubDate>Tue, 11 May 2021 18:00:00 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/shopware-6-instalacion-plantillas/</guid>
+      <description>Si queremos instalar Shopware 6 y recurrimos a la documentaciónveremos que mencionan la configuración de plantillas.
+Tienen dos “templates” diferentes: “Production” y “Development“
+Pero qué son y para qué se usan?
+Lo que llaman “templates” son en realidad repositorios y el propósito de cada una es brindar facilidades al desarrollador según el propósito para el que se instale Shopware 6.
+El “template” “Development” es indicado para desarrolladores que quieren contribuir con código a Shopware 6 (contribuciones al core, extensiones genéricas) o por cualquiera que necesite correr Shopware 6 con datos de prueba sea por curiosidad o capacitación.</description>
+    </item>
+    
+    <item>
+      <title>Shopware 6 – Introducción</title>
+      <link>https://olivertar.github.io/shopware-6-introduccion/</link>
+      <pubDate>Thu, 06 May 2021 17:55:00 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/shopware-6-introduccion/</guid>
+      <description>Shopware es una plataforma de comercio electrónico que está creciendo rápidamente.
+Para aquellos que están interesados en conocer o van a trabajar con esta plataforma pienso que es muy valioso conocer el enfoque de desarrollo y como está estructurada la plataforma. Esto no solamente permitirá tener mejor perspectiva al evaluar la plataforma sino que también saber qué es exactamente lo que estamos haciendo cuando lo instalemos.
+Shopware on-premise es open source y gratuito pero hay versiones pagas que se diferencian por tener características exclusivas basadas en plugins.</description>
+    </item>
+    
+  </channel>
+</rss>

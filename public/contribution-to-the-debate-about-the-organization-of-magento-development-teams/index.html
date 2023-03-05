@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="olivert">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="/img/placeholder.jpg">
+    <meta property="twitter:image" content="/img/placeholder.jpg" />
+    
+
+    
+    <meta name="title" content="Contribution to the debate about the organization of Magento development teams" />
+    <meta property="og:title" content="Contribution to the debate about the organization of Magento development teams" />
+    <meta property="twitter:title" content="Contribution to the debate about the organization of Magento development teams" />
+    
+
+    
+    <meta name="description" content="Magento y otras cosas también">
+    <meta property="og:description" content="Magento y otras cosas también" />
+    <meta property="twitter:description" content="Magento y otras cosas también" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Contribution to the debate about the organization of Magento development teams | olivert | Oliverio Gombert Blog</title>
+
+    <link rel="canonical" href="/contribution-to-the-debate-about-the-organization-of-magento-development-teams/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-155812403-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">olivert</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/general">general</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/magento">magento</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/productividad">productividad</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/pwa">pwa</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/shopware">shopware</a>
+                        </li>
+                        
+                    
+                    
+		    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/placeholder.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/developmentteam" title="developmentteam">
+                            developmentteam
+                        </a>
+                        
+                        <a class="tag" href="/tags/magento" title="magento">
+                            magento
+                        </a>
+                        
+                    </div>
+                    <h1>Contribution to the debate about the organization of Magento development teams</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                olivertar
+                             
+                            on 
+                            Monday, February 17, 2020
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <p>For the development process to be carried out, there is necessarily an analysis practice to convert the client’s need into a “requirement” and a “architecture” job to define how that requirement will be implemented.</p>
+<p>These two tasks are always present, it would not be possible to move forward without doing this.</p>
+<p>I have noticed in many cases that agencies do not do this analysis / architecture process or do so very limited.</p>
+<p>In most cases they are “tasks” that enter into the orbit of developers, of those who have more experience generally, but they expect all developers, somehow, to do some analysis work.</p>
+<p>Normally this unification of roles (analyst / architect / programmer / tester) in the developer is justified by invoking some kind of “agile” development theory.</p>
+<p>(Strangely, when companies look for developers, they don’t usually request “requirements analysis” and “application architecture” skills. In the best case they mention “capacity for analysis”, this term is so vague that it means nothing in itself or means everything according to how you want to interpret)</p>
+<p>It is very likely that a developer with many years of experience has all or part of the ability to fulfill all these roles. But how does this affect the dynamics and performance of development teams?</p>
+<p>The policy of unifying roles, from my point of view, is a waste of resources and considerably lowers the team’s performance and its ability to acquire knowledge.</p>
+<p>Not having some kind of centralization of the analysis and architecture tasks implies that the unification of criteria on how to do things is “theoretical” and therefore is subject to “interpretation”. The result, almost inevitably, is that each developer will use their own criteria and experience.</p>
+<p>The results may be better or worse depending on the quality of the developers but something is certain, there will be no homogeneous criteria within the company. The software will not have identity, low capacity to recycle code and optimize processes, in addition to making verification and debugging procedures difficult.</p>
+<p>This way of working (bad practice from my point of view) leads to an accumulation of technical debt that will be paid in the short / medium term and the cost of growing the team increases instead of decreasing. The rotation of developers not only complicates things further, it is stimulated by this way of working. Developers with little experience often feel inferior to conditions and those with more experience assert their experience as a way of personal positioning. Many times the “agile” teams are a battlefield of egos.</p>
+<p>Usually the PM chooses which developer to assign a task based on the “supposed” estimated complexity of the task, but it is not possible to know the true complexity of the task until the analysis process is performed!!!. Therefore there is no guarantee that the assignments are correct. When the criterion is wrong, the team loses efficiency and in most cases the tasks end up being assigned by an availability criterion instead of a suitability criterion.<br>
+This is one of the reasons why companies often require that all their resources be “highly qualified” and therefore always have an unsatisfied demand.</p>
+<p>In other cases, the task is really complex but code has already been developed for another client, in this case it would only be necessary to make a re-implementation / adaptation that most likely does not require an experienced developer.</p>
+<p>In any case the unification of roles leads to under-utilization or over-utilization of resources.</p>
+<p>The other aspect of the problem is related to training. Usually many developers are overwhelmed by the complexity of the requirement and must make a major effort to solve it, which implies a high degree of stress.</p>
+<p>When a requirement was well analyzed, it is clear and well documented, it serves as a guide to more easily find a solution for implementation and if it is necessary to ask other team members for help, it makes it easy to ask the right questions. Both things contribute to the training of less experienced developers in a less stressful way and make the implementations meet the company’s standards with less code revisions.</p>
+<p>Many companies solve their lack of resources by looking for developers in other regions that do not share the language and time.<br>
+When the team has members who work 100% remotely, as I usually do, it greatly facilitates communication by helping to overcome language barriers and those imposed by different times.</p>
+<p>I think that in its origin many agencies required a criterion of “we all do everything” as an engine of growth but to persevere with this, once established, limits development and runs the risk of becoming bonsai agencies.</p>
+<p>I think that a collaborative project management that includes all the members of different areas (accounts, design, development, etc.) is positive, agile and allows to improve the perspective of all members. But pretending to supplant the analysis by this collaborative management or dilute it in development tasks is highly damaging.</p>
+<p>An adequate organization and composition of the Magento development team (PM, Analyst, Architect, Developers of different seniority) is what allows to create balanced, sustainable and solid teams allowing the growth of both the team members and the agency for which they work for.</p>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/vue-storefront-magento-2-instalacion-de-vue-storefront-en-local-tercera-parte/" data-toggle="tooltip" data-placement="top" title="Vue Storefront &#43; Magento 2 – Instalación de Vue Storefront en local – tercera parte">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/geolocalizacion-por-ip-modulo-para-magento-2/" data-toggle="tooltip" data-placement="top" title="Geolocalización por IP – Modulo para Magento 2">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/olivertar">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/oliveriogombert/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; olivert 2023
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>

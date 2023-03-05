@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="olivert">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="/img/placeholder.jpg">
+    <meta property="twitter:image" content="/img/placeholder.jpg" />
+    
+
+    
+    <meta name="title" content="Como hacer un patch para Magento 2" />
+    <meta property="og:title" content="Como hacer un patch para Magento 2" />
+    <meta property="twitter:title" content="Como hacer un patch para Magento 2" />
+    
+
+    
+    <meta name="description" content="Magento y otras cosas también">
+    <meta property="og:description" content="Magento y otras cosas también" />
+    <meta property="twitter:description" content="Magento y otras cosas también" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Como hacer un patch para Magento 2 | olivert | Oliverio Gombert Blog</title>
+
+    <link rel="canonical" href="/como-hacer-un-patch-para-magento-2/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-155812403-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">olivert</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/general">general</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/magento">magento</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/productividad">productividad</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/pwa">pwa</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/shopware">shopware</a>
+                        </li>
+                        
+                    
+                    
+		    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/placeholder.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/magento-2" title="Magento 2">
+                            Magento 2
+                        </a>
+                        
+                    </div>
+                    <h1>Como hacer un patch para Magento 2</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                olivertar
+                             
+                            on 
+                            Monday, August 10, 2020
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <p>Magento 2 tiene métodos que permiten modificar comportamientos determinados por los módulos de core de Magento o módulos de terceros instalados con composer. Plugin, Rewrite, etc</p>
+<p>Pero que pasa cuando las modificaciones necesarias son producto de un error (bug) y no de un requerimiento para modificar la plataforma?</p>
+<p>En algunos casos es posible mediante los mecanismos de Magento modificar el comportamiento y corregir el bug, pero en otros no y hacer modificaciones al core no es una opción ya que los cambios se perderían (ademas de ser considerado una mala practica) cada vez que corremos composer install.</p>
+<p>Desde mi punto de vista personal, cuando se trata de hacer la corrección de un error no corresponde hacer un rewrite o un plugin, lo indicado es hacer un patch ya que se asume que tarde o temprano en versiones posteriores se incluirá una corrección del problema en el core y en caso de actualizar el core de Magento el modulo con la modificación seguirá existiendo en nuestro proyecto aunque no sea necesario.</p>
+<p>La finalidad del patch es hacer una corrección física del/los archivo/s que causa/n el error y se aplicará cada vez después de correr composer install.</p>
+<p>Hay bugs conocidos para los cuales podemos encontrar patchs en github (normalmente se incorporan al core de Magento cada 3 meses) e instalarlos desde ahí pero en algunos casos necesitamos crear un patch nosotros para un modulo que hemos comprado o un bug de Magento para el cual aun nadie ha creado uno.</p>
+<p>Hay varias maneras de generar un patch, yo voy a explicar una que no necesariamente es la mejor o la indicada para todos los casos.</p>
+<p>Recientemente tuve un problema con un modulo de MageWorx que me pidieron utilizar para un proyecto y tuve que modificar un archivo que tenia un problema simple.</p>
+<p>Primero vamos al directorio donde se encuentra el archivo que queremos patchear y hacemos una copia con otro nombre. Normalmente al nombre del archivo yo agrego la palabra “Fixed”.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd vendor/mageworx/module-shippingrules/Model/Config/Source/Shipping/
+$ cp Methods.php MethodsFixed.php
+</code></pre></div><p>Editamos el archivo “MethodsFixed.php” y hacemos todos las correcciones necesarias para subsanar el problema.</p>
+<p>El próximo paso es correr el comando diff para obtener las modificaciones</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ diff -u Methods.php MethodsFixed.php &gt; mageworx_shippingrules_methods.patch
+</code></pre></div><p>“mageworx_shippingrules_methods” es el nombre del archivo con las diferencias y es de libre elección</p>
+<p>Los patchs pueden estar en cualquier ruta pero lo habitual es encontrarlos en una carpeta “patches” del directorio raíz del proyecto.</p>
+<p>En mi caso uso 2 subcarpetas “core” y “nocore” para diferenciar si los patch corresponden a archivos de Magento o a módulos de terceros.</p>
+<p>Esto es útil cuando tenemos que hacer el update del core de Magento 2 y es necesario verificar si los patchs siguen siendo validos.</p>
+<p>Entonces, si la carpeta “patches” (y las subcarpetas si lo desean) no existe las creamos y movemos el archivo “.patch”</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mv mageworx_shippingrules_methods.patch ~/www/root_project_folder/patches/nocore/
+</code></pre></div><p>Luego editamos el archivo “.patch”</p>
+<p>Las 2 primeras lineas mostraran algo similar a:</p>
+<pre><code>--- Methods.php	2020-08-10 12:06:14.510599032 -0300
++++ MethodsFixed.php	2020-08-10 12:05:17.397000000 -0300
+</code></pre><p>cambiar estas lineas por lo siguiente:</p>
+<pre><code>diff --git a/Model/Config/Source/Shipping/Methods.php b/Model/Config/Source/Shipping/Methods.php
+index 3ee2rd..8349152 111644
+--- a/Model/Config/Source/Shipping/Methods.php
++++ b/Model/Config/Source/Shipping/Methods.php
+</code></pre><p>Notese que agregue antes del nombre del archivo la ruta del archivo dentro del modulo “/Model/Config/Source/Shipping/”</p>
+<p>Respecto al hash index, no es algo que sea necesario modificar en principio.</p>
+<p>El archivo modificado queda así:</p>
+<pre><code>diff --git a/Model/Config/Source/Shipping/Methods.php b/Model/Config/Source/Shipping/Methods.php
+index 3ee2rd..8349152 111644
+--- a/Model/Config/Source/Shipping/Methods.php
++++ b/Model/Config/Source/Shipping/Methods.php
+@@ -111,12 +111,10 @@
+             );
+             $methods&amp;#91;$carrierCode] = &amp;#91;'label' =&gt; $carrierTitle, 'value' =&gt; &amp;#91;]];
+             foreach ($carrierMethods as $methodCode =&gt; $methodTitle) {
+-                $methods&amp;#91;$carrierCode]&amp;#91;'value']&amp;#91;] = &amp;#91;
+-                    'value' =&gt; $carrierCode . '_' . $methodCode,
+-                    -'label' =&gt; '&amp;#91;' . $carrierCode . '] ' . ($methodTitle ? $methodTitle : $methodCode),
+-                ];
++                if(is_string($carrierCode) &amp;&amp; is_string($methodCode) &amp;&amp; is_string($methodTitle)){
++                    $methods&amp;#91;$carrierCode]&amp;#91;'value']&amp;#91;] = &amp;#91;
++                        'value' =&gt; $carrierCode . '_' . $methodCode,
++                        -'label' =&gt; '&amp;#91;' . $carrierCode . '] ' . ($methodTitle ? $methodTitle : $methodCode),
++                    ];
++                }
+             }
+         }
+</code></pre><p>El patch esta listo, lo próximo es incorporarlo al archivo composer.json que se encuentra en la raíz de nuestro proyecto.</p>
+<p>Buscamos la sección de patches y si no existe la creamos.</p>
+<p>Para el ejemplo anterior, debería quedar de esta manera:</p>
+<pre><code>&quot;extra&quot;: {
+        &quot;magento-force&quot;: &quot;override&quot;,
+        &quot;patches&quot;: {
+            &quot;mageworx/module-shippingrules&quot;: {
+                &quot;Correccion del tipo de dato&quot;: &quot;patches/nocore/mageworx_shippingrules_methods.patch&quot;
+            }
+        }
+    }
+</code></pre><p>En estas lineas se muestra el nombre del modulo, la descripción y el archivo con el patch.</p>
+<p>Si no estamos seguros cual es el nombre del modulo que tenemos que usar tenemos que buscarlo en el composer.json del modulo al que pertenece el archivo que queremos patchear.</p>
+<p>El ultimo paso es aplicar el patch, lo hacemos con :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ composer install
+</code></pre></div><p>Finalmente, si pasado el tiempo instalamos una versión actualizada del modulo (o actualizamos el core de magento) y el patch no es necesario solo tenemos que removerlo del composer.json de nuestro proyecto y eliminar el archivo con el patch que ya no será necesario.</p>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/nueva-version-magento-2-4/" data-toggle="tooltip" data-placement="top" title="Nueva versión Magento 2.4">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/shopware-6-introduccion/" data-toggle="tooltip" data-placement="top" title="Shopware 6 – Introducción">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/olivertar">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/oliveriogombert/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; olivert 2023
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>

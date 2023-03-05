@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>module on olivert</title>
+    <link>https://olivertar.github.io/tags/module/</link>
+    <description>Recent content in module on olivert</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Sat, 25 Jul 2020 23:02:02 +0000</lastBuildDate>
+    
+	<atom:link href="https://olivertar.github.io/tags/module/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ABM multistore genérico para Magento 2</title>
+      <link>https://olivertar.github.io/abm-multistore-generico-para-magento-2/</link>
+      <pubDate>Sat, 25 Jul 2020 23:02:02 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/abm-multistore-generico-para-magento-2/</guid>
+      <description>Los últimos meses estuve trabajando en migrar sitios de Magento 1 a Magento 2.
+En muchos casos tuve que migrar código que, con mas o menos características, eran simples ABM (CRUD en ingles).
+Para no estar reinventando la rueda y mejorar la mantenibilidad del código hice un modulo base sobre el que parto cada vez que necesito un ABM.
+La premisa fue que sea los lo mas genérico posible y cumpla con los estándares de Magento en cuanto a la implementación de contratos de servicios y demás buenas practicas.</description>
+    </item>
+    
+    <item>
+      <title>Magento 2 – Modulo “Upload File” en formulario de registro</title>
+      <link>https://olivertar.github.io/magento-2-modulo-upload-file-en-formulario-de-registro/</link>
+      <pubDate>Tue, 07 Jul 2020 21:21:35 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/magento-2-modulo-upload-file-en-formulario-de-registro/</guid>
+      <description>Módulo básico para Magento 2 que puede servir si queremos pedirle al usuario que suministre una foto / avatar en el momento de registrarse o algún tipo de documentación, este uso mas común en sitios B2B.
+Para los que se están iniciando, mirando el código pueden aprender:
+ Como crear un atributo tipo “file” en la entidad “customer” Como crear opciones de configuración para un modulo (System.xml) Como “deshabilitar” el modulo en el frontend desde la configuración Como manipular layouts y templates Como enmascarar una URL de descarga para no exponer las rutas del servidor.</description>
+    </item>
+    
+  </channel>
+</rss>

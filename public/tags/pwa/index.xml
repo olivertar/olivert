@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pwa on olivert</title>
+    <link>https://olivertar.github.io/tags/pwa/</link>
+    <description>Recent content in pwa on olivert</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Thu, 06 May 2021 17:55:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://olivertar.github.io/tags/pwa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Shopware 6 – Introducción</title>
+      <link>https://olivertar.github.io/shopware-6-introduccion/</link>
+      <pubDate>Thu, 06 May 2021 17:55:00 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/shopware-6-introduccion/</guid>
+      <description>Shopware es una plataforma de comercio electrónico que está creciendo rápidamente.
+Para aquellos que están interesados en conocer o van a trabajar con esta plataforma pienso que es muy valioso conocer el enfoque de desarrollo y como está estructurada la plataforma. Esto no solamente permitirá tener mejor perspectiva al evaluar la plataforma sino que también saber qué es exactamente lo que estamos haciendo cuando lo instalemos.
+Shopware on-premise es open source y gratuito pero hay versiones pagas que se diferencian por tener características exclusivas basadas en plugins.</description>
+    </item>
+    
+    <item>
+      <title>Vue Storefront &#43; Magento 2 – Instalación de Vue Storefront en local – tercera parte</title>
+      <link>https://olivertar.github.io/vue-storefront-magento-2-instalacion-de-vue-storefront-en-local-tercera-parte/</link>
+      <pubDate>Tue, 28 Jan 2020 14:23:21 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/vue-storefront-magento-2-instalacion-de-vue-storefront-en-local-tercera-parte/</guid>
+      <description>Este articulo contiene información complementaria que no fue incluida en artículos anteriores para no distraer la atención del foco principal.
+Detener todas las instancias de Vue Storefront
+En teoría “node killall” debería detenerlas, pero al menos en mi caso eso no sucede.
+Si tenes el proceso corriendo en un terminal, “CTRL + C” deberia matarlo, pero si esto tampoco resulta la alternativa, siempre hablando de sistemas Linux, es matar los procesos que corren en el puerto 3000 y 8080 (si estos fueron los puertos donde fue lanzado)</description>
+    </item>
+    
+    <item>
+      <title>Vue Storefront &#43; Magento 2 – Instalación de Vue Storefront en local – segunda parte</title>
+      <link>https://olivertar.github.io/vue-storefront-magento-2-instalacion-de-vue-storefront-en-local-segunda-parte/</link>
+      <pubDate>Tue, 21 Jan 2020 13:00:06 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/vue-storefront-magento-2-instalacion-de-vue-storefront-en-local-segunda-parte/</guid>
+      <description>El ultimo paso para completar la instalación de Vue Sotrefront en local es instalar Magento – Vue Storefront y sincronizar los datos.
+Clonamos el repositorio
+$ git clone https://github.com/DivanteLtd/mage2vuestorefront.git mage2vs Luego vamos al directorio “src” y lo instalamos
+$ cd mage2vs/src $ npm install Este es el punto donde cambiaremos manualmente algunas configuraciones para conectarnos a nuestro backend Magento 2 + Sample data.
+Editamos el archivo “src/config.js” y buscamos la seccion “magento: {”</description>
+    </item>
+    
+    <item>
+      <title>Vue Storefront &#43; Magento 2 – Instalación de Vue Storefront en local – primera parte</title>
+      <link>https://olivertar.github.io/vue-storefront-magento-2-instalacion-de-vue-storefront-en-local-primera-parte/</link>
+      <pubDate>Tue, 14 Jan 2020 10:17:44 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/vue-storefront-magento-2-instalacion-de-vue-storefront-en-local-primera-parte/</guid>
+      <description>En este articulo comenzaremos a instalar Vue Storefront en el entorno local y conectarlo con una instancia de Magento 2 + sample data mediante el usuario API que configuré en un articulo anterior.
+Los requisitos para la instalación es que tengamos en nuestro entorno:
+ Docker Node JS Yarn Imagemagick  Vue Storefront usa Redis. Por lo tanto si tienen alguna instancia de Redis corriendo sugiero detenerla para evitar conflictos con los puertos (podríamos modificarlos pero eso agrega complejidad al asunto).</description>
+    </item>
+    
+  </channel>
+</rss>

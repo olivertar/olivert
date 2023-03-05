@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grunt on olivert</title>
+    <link>https://olivertar.github.io/tags/grunt/</link>
+    <description>Recent content in Grunt on olivert</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-es</language>
+    <lastBuildDate>Thu, 14 Nov 2019 21:20:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://olivertar.github.io/tags/grunt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Grunt para compilar less en Magento 2</title>
+      <link>https://olivertar.github.io/grunt-para-compilar-less-en-magento-2/</link>
+      <pubDate>Thu, 14 Nov 2019 21:20:00 +0000</pubDate>
+      
+      <guid>https://olivertar.github.io/grunt-para-compilar-less-en-magento-2/</guid>
+      <description>Magento 2, por defecto, utiliza less como lenguaje dinámico de CSS.
+Esto significa que debemos compilar el código less para transformarlo en CSS y que sea interpretado por los navegadores.
+Magento recomienda el uso de Grunt para esto. La finalidad de este articulo es mostrar como proceder para instalarlo en un SO Ubuntu y utilizarlo en nuestro proyecto Magento 2.
+Grunt requiere Node JS para funcionar, entonces el primer paso es instalar Node JS si es que no lo tenemos instalado.</description>
+    </item>
+    
+  </channel>
+</rss>
