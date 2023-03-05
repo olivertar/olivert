@@ -1,0 +1,33 @@
+baseURL = "https://olivertar.github.io/"
+languageCode = "es-es"
+title = "olivert"
+theme = 'hugo-theme-cleanwhite'
+preserveTaxonomyNames = true
+googleAnalytics = "UA-155812403-1"
+
+[params]
+  header_image = "/wp-content/uploads/2019/12/cropped-home_banner_1-scaled-1.jpg"
+  SEOTitle = "olivert | Oliverio Gombert Blog"
+  description = "Magento y otras cosas también"
+  omit_categories = false
+  sidebar_about_description = "Magento Developer, eCommerce specialist"
+
+    [params.social]
+    #email          = "olivertar@gmail.com"
+    #facebook      = "full profile url in facebook"
+    #googleplus    = "full profile url in googleplus"
+    #twitter       = "full profile url in twitter"
+    linkedin       = "https://www.linkedin.com/in/oliveriogombert/"
+    #stackoverflow  = "https://stackoverflow.com/users/yourstackoverflowid"
+    #instagram     = "full profile url in instagram"
+    github         = "https://github.com/olivertar"
+    #wechat         = "your wechat qr code image"
+    #medium        = "full profile url in medium"
+    #slack         = "full workspace url in slack"
+    #pinterest     = "full profile url in pinterest"
+    #reddit        = "full profile url in reddit"
+    #gitlab        = "full profile url in gitlab"
+    #mastodon      = "full profile url in mastodon"
+    #keybase       = "full profile url in keybase"
+    #xing          = "https://www.xing.com/profile/yourxingid"
+    #git           = "full profile url for git user"
